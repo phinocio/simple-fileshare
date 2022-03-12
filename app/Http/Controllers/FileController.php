@@ -35,6 +35,12 @@ class FileController extends Controller
 		return redirect('/files');
 	}
 
+	public function destroy($file) {
+		Storage::delete('uploads/' . $file);
+
+		return redirect('/files');
+	}
+
 
 	protected function getSize($size_in_bytes) {
 		if ($size_in_bytes < 1024) {

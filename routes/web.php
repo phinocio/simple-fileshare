@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Route::get('/files', [FileController::class, 'index']);
 Route::post('/files', [FileController::class, 'upload']);
-Route::get('/files/{file}', [Filecontroller::class, 'download']);
+Route::get('/files/{file}', [FileController::class, 'download']);
+Route::post('/files/{file}', [FileController::class, 'destroy']);
