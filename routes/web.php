@@ -13,11 +13,7 @@ use App\Http\Controllers\FileController;
 |
 */
 
-Route::get('/', function () {
-    return redirect('/files', 301);
-});
-
-Route::get('/files', [FileController::class, 'index']);
-Route::post('/files', [FileController::class, 'upload']);
-Route::get('/files/{file}', [FileController::class, 'download']);
-Route::post('/files/{file}', [FileController::class, 'destroy']);
+Route::get('/', [FileController::class, 'index']);
+Route::post('/', [FileController::class, 'upload']);
+Route::get('/{file}', [FileController::class, 'download']);
+Route::post('/{file}', [FileController::class, 'destroy']);
