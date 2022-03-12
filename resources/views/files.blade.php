@@ -22,7 +22,7 @@
 		</div>
 
 		<div class="files">
-			<h2 style="color: #ff79c6" >Disk Usage: {{ $totalSize }} / 50 G</h2>
+			<h2 style="color: #ff79c6" >Disk Usage: {{ $totalSize }} / 20 G</h2>
 			<table>
 				@foreach($files as $file)
 				<tr>
