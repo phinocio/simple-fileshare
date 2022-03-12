@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Storage;
 class FileController extends Controller
 {
     public function index() {
-		phpinfo();
 		$files = [];
 		$allFiles = Storage::files('uploads');
 		$totalSize = 0;
