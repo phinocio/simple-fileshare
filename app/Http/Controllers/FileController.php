@@ -32,13 +32,13 @@ class FileController extends Controller
 		$file = $request->file('fileUpload');
 		Storage::putFileAs('uploads', $file, $file->getClientOriginalName());
 
-		return redirect('/files');
+		return redirect('/');
 	}
 
 	public function destroy($file) {
 		Storage::delete('uploads/' . $file);
 
-		return redirect('/files');
+		return redirect('/');
 	}
 
 
