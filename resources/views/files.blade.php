@@ -27,9 +27,9 @@
 				@foreach($files as $file)
 				<tr>
 					<td style="color: #50fa7b; text-align: right">{{ $file['size'] }}</td>
-					<td><a style="color: #caa9fa" href="/files/{{ $file['name'] }}">{{ $file['name'] }}</a></td>
+					<td><a style="color: #caa9fa" href="/{{ $file['name'] }}">{{ $file['name'] }}</a></td>
 					<td>
-						<form action="/files/{{ $file['name'] }}" method="POST">
+						<form action="/{{ $file['name'] }}" method="POST">
 							@csrf
 							<button class="deleteButton" type="submit" value="Delete">Delete</button>
 						</form>
